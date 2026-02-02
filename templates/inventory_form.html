@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+商品検索
+{% endblock %}
+
+{% block content %}
+<h2>商品検索</h2>
+
+<!-- GET検索 -->
+<form method="get" action="{{ url_for('inventory_search') }}">
+  <input type="number" name="item_id" placeholder="商品ID">
+  <button type="submit">GET検索</button>
+</form>
+
+<hr>
+
+<!-- POST検索 -->
+<form method="post" action="{{ url_for('inventory_search') }}">
+  <input type="number" name="item_id" placeholder="商品ID">
+  <button type="submit">POST検索</button>
+</form>
+{% endblock %}

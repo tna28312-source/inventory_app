@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+在庫一覧
+{% endblock %}
+
+{% block content %}
+<h2>在庫管理ページ</h2>
+
+<form action="{{ url_for('inventory_search') }}" method="get">
+  <input type="number" name="item_id" placeholder="商品ID">
+  <button type="submit">検索</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}在庫管理{% endblock %}</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header>
+    <h1>☕ 昭和レトロ喫茶店 在庫管理</h1>
+    <nav>
+      <a href="{{ url_for('inventory') }}">在庫一覧</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    {% block content %}
+    <!-- ここがページごとに差し替わる -->
+    {% endblock %}
+  </main>
+
+  <hr>
+  <footer>
+    <small>© 昭和レトロ喫茶店</small>
+  </footer>
+
+</body>
+</html>
