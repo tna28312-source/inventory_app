@@ -52,6 +52,9 @@ def inventory_detail(item_id):
 if __name__ == "__main__":
     app.run(debug=True)
 
+# test-branchで追加したコメント
+
+
 
 
 
